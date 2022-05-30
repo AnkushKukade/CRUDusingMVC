@@ -25,6 +25,7 @@ namespace CRUDusingMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // database configuration added
             services.AddControllersWithViews();
             string connectionStr = Configuration.GetConnectionString("sqlConnection");
             services.AddDbContext<TeacherContext>(options => options.UseSqlServer(connectionStr));
